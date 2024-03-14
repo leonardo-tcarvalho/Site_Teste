@@ -17,6 +17,7 @@
       <img src="assets/images/logo.svg" alt="">
       <nav class="nav"> 
         <img id="btnOpen" src="assets/images/icon-menu.svg" onclick="openMenu()"></img>
+        <div id="opacity"></div>
         <menu id="itens">
           <img id="btnClose" src="assets/images/icon-menu-close.svg" onclick="closeMenu()">
           <ul>
@@ -26,6 +27,7 @@
             <li><a href="">Trending</a></li>
             <li><a href="">Categories</a></li>
           </ul>
+          
         </menu>
       </nav>
     </div>
@@ -100,14 +102,16 @@
         itens.style.display = 'none'
       } else {
         itens.style.display = 'block'
-        btnFechar.style.display = 'block'
+        opacity.style.display = 'block'
       }
     }
     function closeMenu() {
       if (itens.style.display == 'none') {
         itens.style.display = 'block'
+        opacity.style.display = 'none'
       } else {
         itens.style.display = 'none'
+        opacity.style.display = 'none'
       }
     }
   </script>
