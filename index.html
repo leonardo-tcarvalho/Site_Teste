@@ -15,19 +15,24 @@
   <div class="container">
     <div class="navBar">
       <img src="assets/images/logo.svg" alt="">
-      <nav class="nav">
-        <ul>
-          <li><a href="">Home</a></li>
-          <li><a href="">New</a></li>
-          <li><a href="">Popular</a></li>
-          <li><a href="">Trending</a></li>
-          <li><a href="">Categories</a></li>
-        </ul>
+      <nav class="nav"> 
+        <img id="btnOpen" src="assets/images/icon-menu.svg" onclick="openMenu()"></img>
+        <menu id="itens">
+          <img id="btnClose" src="assets/images/icon-menu-close.svg" onclick="closeMenu()">
+          <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">New</a></li>
+            <li><a href="">Popular</a></li>
+            <li><a href="">Trending</a></li>
+            <li><a href="">Categories</a></li>
+          </ul>
+        </menu>
       </nav>
     </div>
     <div class="contents">
       <div>
-        <img src="assets/images/image-web-3-desktop.jpg" alt="" width="97%">
+        <img src="assets/images/image-web-3-desktop.jpg" alt="" class="img-desktop">
+        <img src="assets/images/image-web-3-mobile.jpg" alt="" class="img-mobile">
         <div class="readMore">
           <div class="readMore-1">
             <h1>The Bright Future of Web 3.0?</h1>
@@ -54,7 +59,7 @@
       </div>
     </div>
     <aside>
-      <div class="contents-aside" style="margin-right: 20px;"> 
+      <div class="contents-aside" style="margin-right: 15px;"> 
         <div>
           <img src="assets/images/image-retro-pcs.jpg" alt="">
         </div>
@@ -64,9 +69,9 @@
           <p>What happens when old PCs are given modern upgrades?</p>
         </div>
       </div>
-      <div class="contents-aside">
+      <div class="contents-aside" style="margin-right: 15px;">
         <div>
-          <img src="assets/images/image-top-laptops.jpg" alt="" style="margin-right: 20px;">
+          <img src="assets/images/image-top-laptops.jpg" alt="">
         </div>
         <div>
           <h1>02</h1>
@@ -89,6 +94,22 @@
       Coded by <a href="#">Leonardo Carvalho</a>
     </div>
   </div>
-  
+  <script>
+    function openMenu() {
+      if (itens.style.display == 'block') {
+        itens.style.display = 'none'
+      } else {
+        itens.style.display = 'block'
+        btnFechar.style.display = 'block'
+      }
+    }
+    function closeMenu() {
+      if (itens.style.display == 'none') {
+        itens.style.display = 'block'
+      } else {
+        itens.style.display = 'none'
+      }
+    }
+  </script>
 </body>
 </html>
